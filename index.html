@@ -1,0 +1,52 @@
+<!--
+ * @Description: 
+ * @Author: 815708052@qq.com
+ * @LastEditors: maDongsheng
+ * @Date: 2019-02-27 14:26:23
+ * @LastEditTime: 2019-02-27 16:07:24
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="default.css" title="默认">
+    <link rel="alternate stylesheet" href="red.css" title="红色">
+    <link rel="alternate stylesheet" href="green.css" title="绿色">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1><button id="btn">变色</button></h1>    
+    <p>原生HTML特性下换肤</p>
+    <br>
+    <br>
+    <p>link元素,三种不同性质的css样式文件加载</p>
+    <br>
+    <br>
+    <ul>
+        <li>没有title  ref 仅仅是 stylesheet   无论如何都会加载  e.g. idnex.css</li>
+        <li>有title属性   ref 仅仅为 stylesheel  作为默认样式css文件加载并渲染  e.g. default.css  </li>
+        <li>有title属性  rel同时包含alertnate stylesheel   作为备选样式css文件加载,默认不渲染  e.g. red.css && green.css</li>
+    </ul>
+    <br>
+    <br>
+    <p>根据  rel="stylesheel"的link如果有title属性  并且有值 ,性质上就变成了一个可以控制其渲染或者不渲染的特殊元素了</p>
+    <br>
+    <br>
+
+    <p>
+        <small>// 渲染red.css</small>
+        document.querySelector('link[href="red.css"]').disabled = false
+        <small style="color:red"> 在把disabled属性设置为false前 要先设置为true</small>
+    </p>
+    <br>
+    <br>
+    <br>
+    <p>参考链接: <a href="https://www.zhangxinxu.com/wordpress/2019/02/link-rel-alternate-website-skin/">https://www.zhangxinxu.com/wordpress/2019/02/link-rel-alternate-website-skin/</a></p>
+    <script src="index.js"></script>
+</body>
+</html>

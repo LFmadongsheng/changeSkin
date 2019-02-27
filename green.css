@@ -1,0 +1,9 @@
+body{
+    background: greenyellow;
+}
+button{
+    border:none;
+    background: #335;
+    color:#ff4;
+    padding:5px;
+}
